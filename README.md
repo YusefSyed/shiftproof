@@ -72,7 +72,7 @@ The evaluation uses synthetic data and automated coordinator actions. Runtime an
 
 ## Project status
 
-This is a prototype using synthetic community-pantry data. Source: [YusefSyed/shiftproof](https://github.com/YusefSyed/shiftproof). [Public demo video](https://www.youtube.com/watch?v=PeNYosqIMco). Contest registration is complete; AWS account/Builder ID verification and final entry submission are pending. See [the submission checklist](docs/submission-checklist.md).
+This is a prototype using synthetic community-pantry data. Source: [YusefSyed/shiftproof](https://github.com/YusefSyed/shiftproof). [Public demo video](https://www.youtube.com/watch?v=PeNYosqIMco). [Submitted contest entry](https://devpost.com/software/shiftproof-dftlh5), received September 6, 2026. Judging and any award remain pending. See [the submission checklist](docs/submission-checklist.md).
 
 ## License
 

@@ -1,6 +1,6 @@
 # ShiftProof submission copy
 
-Status: prepared text; not a submitted entry.
+Status: submitted September 6, 2026. [Project entry](https://devpost.com/software/shiftproof-dftlh5). This file preserves the prepared copy; the live project page contains the final submitted text.
 
 ## Project name
 ShiftProof
@@ -46,5 +46,5 @@ Use the repository README to install the pinned dependencies and local model. La
 - Public source repository: https://github.com/YusefSyed/shiftproof.
 - Public YouTube demo: https://www.youtube.com/watch?v=PeNYosqIMco.
 - Architecture: `docs/architecture.svg` in the source repository.
-- AWS Builder ID: account holder must supply or create it.
-- AWS account: required by the rules; not yet verified.
+- AWS Builder ID: signed-in identity verified and supplied in the private judging form.
+- No paid AWS services or cloud deployment were used.

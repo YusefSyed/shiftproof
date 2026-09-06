@@ -23,9 +23,9 @@ The accepted synthetic uploaded-note probe completed on 2026-09-06 in 40.694 sec
 
 The sanitized structured receipts are [native workflow](evidence/native-workflow.json) and [uploaded-note probe](evidence/uploaded-note.json). They include actual tool activity, measured durations, and source-receipt checksums.
 
-## Remaining release gates
+## Submission status
 
-The public source repository is https://github.com/YusefSyed/shiftproof. The [public video](https://www.youtube.com/watch?v=PeNYosqIMco) is published and contest registration is complete. Required AWS account/Builder ID verification and a final submission receipt remain pending. See [submission checklist](submission-checklist.md).
+The public source repository is https://github.com/YusefSyed/shiftproof. The [public video](https://www.youtube.com/watch?v=PeNYosqIMco) is published. The signed-in Builder ID was verified and the [entry](https://devpost.com/software/shiftproof-dftlh5) was submitted September 6, 2026. Devpost displayed Project submitted and Submitted to: Agents for Humans Hackathon. This proves receipt, not judging eligibility, selection, a prize, or payment. See [submission checklist](submission-checklist.md).
 
 ## Browser acceptance
 

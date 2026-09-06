@@ -1,18 +1,20 @@
-# Submission checklist
+# Submission receipt
 
-This checklist tracks preparation only. It does not claim an entry, acceptance of terms, an AWS account, a Builder ID, or a public video.
+[ShiftProof](https://devpost.com/software/shiftproof-dftlh5) was submitted to the Agents for Humans Hackathon on September 6, 2026, in the Good Neighbor Agents track.
 
-Contest reference: [Agents for Humans rules](https://agentsforhumans.devpost.com/rules) and FAQ. The stated deadline is September 14 at 5:00 PM Pacific. Confirm the current rules and FAQ before submitting.
+Devpost displayed **Project submitted!** and listed **Submitted to: Agents for Humans Hackathon**. Submission ID: `1173437`.
 
-- [x] Recheck official rules and deadline on September 6; account-holder eligibility declarations remain pending.
-- [ ] Create or verify the required AWS account and Builder ID.
-- [x] Created as a new project on September 6, 2026; standard dependencies and AI assistance disclosed.
-- [x] Complete the full real local-model workflow evaluation and retain its sanitized receipt separately from mocked tests.
-- [x] Run the release checks and retain their actual output.
-- [x] Render a sub-five-minute synthetic-results demo; published with AI narration disclosure.
-- [x] Publish the source repository publicly; GitHub detects the MIT license.
-- [x] Repository created: https://github.com/YusefSyed/shiftproof.
-- [x] Public demo: https://www.youtube.com/watch?v=PeNYosqIMco.
-- [x] Prepare truthful submission text in `submission.md`, including synthetic scheduling and local inference.
-- [x] Account holder approved agreements and eligibility; contest registration completed. Final entry review remains.
-- [ ] Submit only after the account holder accepts the applicable terms and confirms the final entry.
+- [x] New project, standard dependencies and AI assistance disclosed.
+- [x] Account holder approved eligibility and the applicable agreements.
+- [x] Real local-model workflow and separate uploaded-note isolation probe passed.
+- [x] 56 automated checks passed; lint, types and browser acceptance verified.
+- [x] Public MIT source: https://github.com/YusefSyed/shiftproof.
+- [x] Public 208.25-second demo with synthetic-data and AI-narration disclosure: https://www.youtube.com/watch?v=PeNYosqIMco.
+- [x] Required architecture diagram uploaded; setup and testing instructions supplied.
+- [x] Signed-in AWS Builder ID verified and entered in the private judging form.
+- [x] Final project text, Strands technology tags and links reviewed.
+- [x] Submission receipt verified in Devpost.
+
+No paid inference API or cloud deployment was used. A separate AWS cloud billing account was not inspected. Receipt does not establish judging eligibility, selection, a prize, or payment.
+
+The official submission deadline is September 14, 2026 at 5:00 PM Pacific / 8:00 PM Toronto. The finalization page instructs entrants not to change the project, source repository or video after that deadline until the winner announcement. [Official rules](https://agentsforhumans.devpost.com/rules).
