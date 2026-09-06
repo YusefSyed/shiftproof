@@ -1,0 +1,119 @@
+{
+  "passed": true,
+  "synthetic_probes": true,
+  "real_model": true,
+  "model": {
+    "model_id": "qwen3.5:9b-q4_K_M",
+    "digest": "6488c96fa5faab64bb65cbd30d4289e20e6130ef535a93ef9a49f42eda893ea7",
+    "quantization": "Q4_K_M",
+    "parameter_size": "9.7B",
+    "endpoint": "http://127.0.0.1:11435"
+  },
+  "started_at": "2026-09-06T21:32:20.641432+00:00",
+  "provider_calls_inspected": 4,
+  "raw_name_excluded": true,
+  "raw_title_excluded": true,
+  "instruction_note_excluded": true,
+  "preferred_assignments": 8,
+  "proposal_count": 0,
+  "elapsed_seconds": 40.694,
+  "trace": [
+    {
+      "type": "model_round",
+      "status": "running",
+      "detail": "Model round 1"
+    },
+    {
+      "type": "model_end",
+      "status": "complete",
+      "duration": 10.708,
+      "detail": "Model round 1"
+    },
+    {
+      "type": "tool_start",
+      "tool": "inspect_case",
+      "arguments": {},
+      "status": "running"
+    },
+    {
+      "type": "tool_end",
+      "tool": "inspect_case",
+      "status": "complete",
+      "result_id": null,
+      "duration": 0.005
+    },
+    {
+      "type": "model_round",
+      "status": "running",
+      "detail": "Model round 2"
+    },
+    {
+      "type": "model_end",
+      "status": "complete",
+      "duration": 4.523,
+      "detail": "Model round 2"
+    },
+    {
+      "type": "tool_start",
+      "tool": "solve_schedule",
+      "arguments": {},
+      "status": "running"
+    },
+    {
+      "type": "tool_end",
+      "tool": "solve_schedule",
+      "status": "complete",
+      "result_id": "R_cac35061e28b42cf",
+      "duration": 0.054
+    },
+    {
+      "type": "model_round",
+      "status": "running",
+      "detail": "Model round 3"
+    },
+    {
+      "type": "model_end",
+      "status": "complete",
+      "duration": 19.974,
+      "detail": "Model round 3"
+    },
+    {
+      "type": "tool_start",
+      "tool": "prepare_review",
+      "arguments": {
+        "result_id": "R_cac35061e28b42cf",
+        "evidence_ids": [
+          "R_cac35061e28b42cf:verification",
+          "R_cac35061e28b42cf:coverage:S1:helper",
+          "R_cac35061e28b42cf:coverage:S1:lead",
+          "R_cac35061e28b42cf:coverage:S2:helper",
+          "R_cac35061e28b42cf:coverage:S2:lead",
+          "R_cac35061e28b42cf:coverage:S3:helper",
+          "R_cac35061e28b42cf:coverage:S3:lead",
+          "R_cac35061e28b42cf:coverage:S4:helper",
+          "R_cac35061e28b42cf:coverage:S4:lead"
+        ]
+      },
+      "status": "running"
+    },
+    {
+      "type": "tool_end",
+      "tool": "prepare_review",
+      "status": "complete",
+      "result_id": "R_cac35061e28b42cf",
+      "duration": 0.0
+    },
+    {
+      "type": "model_round",
+      "status": "running",
+      "detail": "Model round 4"
+    },
+    {
+      "type": "model_end",
+      "status": "complete",
+      "duration": 5.417,
+      "detail": "Model round 4"
+    }
+  ],
+  "source_receipt_sha256": "7abdaf0ad646b8c400e9ff6659f43eaaa11e973ca12b7d1e76edb7b698ca0f13"
+}

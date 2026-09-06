@@ -1,0 +1,18 @@
+flowchart LR
+    I[Coordinator: five-file inputs or synthetic demo] --> S[Parent FastAPI session]
+    S --> C[Canonical case and constraints]
+    C --> A[Strands agent: native Ollama and pinned local Qwen]
+    A --> T[Six allowlisted tools]
+    T --> I1[inspect_case]
+    T --> SO[solve_schedule]
+    T --> D[diagnose_infeasibility]
+    T --> P[propose_change]
+    T --> SM[simulate_change]
+    T --> R[prepare_review]
+    SO --> V[Independent verifier]
+    SM --> V
+    V --> S
+    S --> H{Coordinator confirmation}
+    H -->|apply proposal| C
+    H -->|approve verified schedule| E[Deterministic ZIP export]
+    E --> O[CSV, JSON, verification and iCalendar snapshots]

@@ -1,0 +1,2278 @@
+{
+  "synthetic_data_only": true,
+  "real_model": true,
+  "operator_actions": "Automated test harness exercising the explicit human UI routes",
+  "runtime_model": {
+    "model_id": "qwen3.5:9b-q4_K_M",
+    "digest": "6488c96fa5faab64bb65cbd30d4289e20e6130ef535a93ef9a49f42eda893ea7",
+    "quantization": "Q4_K_M",
+    "parameter_size": "9.7B",
+    "endpoint": "http://127.0.0.1:11435"
+  },
+  "started_at": "2026-09-06T21:19:35.651065+00:00",
+  "passed": true,
+  "scenarios": [
+    {
+      "label": "Baseline",
+      "elapsed_seconds": 47.323,
+      "trace": [
+        {
+          "seq": 1,
+          "type": "model_round",
+          "status": "running",
+          "detail": "Model round 1"
+        },
+        {
+          "seq": 2,
+          "type": "model_end",
+          "status": "complete",
+          "duration": 11.152,
+          "detail": "Model round 1"
+        },
+        {
+          "seq": 3,
+          "type": "tool_start",
+          "tool": "inspect_case",
+          "arguments": {},
+          "status": "running"
+        },
+        {
+          "seq": 4,
+          "type": "tool_end",
+          "tool": "inspect_case",
+          "status": "complete",
+          "result_id": null,
+          "duration": 0.001
+        },
+        {
+          "seq": 5,
+          "type": "model_round",
+          "status": "running",
+          "detail": "Model round 2"
+        },
+        {
+          "seq": 6,
+          "type": "model_end",
+          "status": "complete",
+          "duration": 4.766,
+          "detail": "Model round 2"
+        },
+        {
+          "seq": 7,
+          "type": "tool_start",
+          "tool": "solve_schedule",
+          "arguments": {},
+          "status": "running"
+        },
+        {
+          "seq": 8,
+          "type": "tool_end",
+          "tool": "solve_schedule",
+          "status": "complete",
+          "result_id": "R_d07e1e2751664a6e",
+          "duration": 0.018
+        },
+        {
+          "seq": 9,
+          "type": "model_round",
+          "status": "running",
+          "detail": "Model round 3"
+        },
+        {
+          "seq": 10,
+          "type": "model_end",
+          "status": "complete",
+          "duration": 22.043,
+          "detail": "Model round 3"
+        },
+        {
+          "seq": 11,
+          "type": "tool_start",
+          "tool": "prepare_review",
+          "arguments": {
+            "result_id": "R_d07e1e2751664a6e",
+            "evidence_ids": [
+              "R_d07e1e2751664a6e:verification",
+              "R_d07e1e2751664a6e:coverage:S1:helper",
+              "R_d07e1e2751664a6e:coverage:S1:lead",
+              "R_d07e1e2751664a6e:coverage:S2:helper",
+              "R_d07e1e2751664a6e:coverage:S2:lead",
+              "R_d07e1e2751664a6e:coverage:S3:helper",
+              "R_d07e1e2751664a6e:coverage:S3:lead",
+              "R_d07e1e2751664a6e:coverage:S4:helper",
+              "R_d07e1e2751664a6e:coverage:S4:lead"
+            ]
+          },
+          "status": "running"
+        },
+        {
+          "seq": 12,
+          "type": "tool_end",
+          "tool": "prepare_review",
+          "status": "complete",
+          "result_id": "R_d07e1e2751664a6e",
+          "duration": 0.0
+        },
+        {
+          "seq": 13,
+          "type": "model_round",
+          "status": "running",
+          "detail": "Model round 4"
+        },
+        {
+          "seq": 14,
+          "type": "model_end",
+          "status": "complete",
+          "duration": 8.25,
+          "detail": "Model round 4"
+        }
+      ],
+      "result": {
+        "status": "VERIFIED_FEASIBLE",
+        "case_hash": "0277bf469ee7328ad9f44d50e5337fc3740e1244a5a3d11379ff9795f2633853",
+        "revision": 1,
+        "candidate": {
+          "case_hash": "0277bf469ee7328ad9f44d50e5337fc3740e1244a5a3d11379ff9795f2633853",
+          "candidate_hash": "e923b414f6fa23664467687d28bcc8e03cae8b70c6072c437ce7b685a9d05391",
+          "hypothetical": false,
+          "solver": {
+            "case_hash": "0277bf469ee7328ad9f44d50e5337fc3740e1244a5a3d11379ff9795f2633853",
+            "status": "OPTIMAL",
+            "assignments": [
+              {
+                "volunteer_id": "V01",
+                "shift_id": "S1",
+                "role": "lead"
+              },
+              {
+                "volunteer_id": "V01",
+                "shift_id": "S3",
+                "role": "lead"
+              },
+              {
+                "volunteer_id": "V02",
+                "shift_id": "S2",
+                "role": "lead"
+              },
+              {
+                "volunteer_id": "V02",
+                "shift_id": "S4",
+                "role": "lead"
+              },
+              {
+                "volunteer_id": "V03",
+                "shift_id": "S1",
+                "role": "helper"
+              },
+              {
+                "volunteer_id": "V04",
+                "shift_id": "S2",
+                "role": "helper"
+              },
+              {
+                "volunteer_id": "V05",
+                "shift_id": "S3",
+                "role": "helper"
+              },
+              {
+                "volunteer_id": "V06",
+                "shift_id": "S4",
+                "role": "helper"
+              }
+            ],
+            "phases": [
+              {
+                "name": "feasibility",
+                "status": "OPTIMAL",
+                "value": null,
+                "proven_optimal": true
+              },
+              {
+                "name": "replacements",
+                "status": "OPTIMAL",
+                "value": 0,
+                "proven_optimal": true
+              },
+              {
+                "name": "non_preferred",
+                "status": "OPTIMAL",
+                "value": 0,
+                "proven_optimal": true
+              },
+              {
+                "name": "dispersion",
+                "status": "OPTIMAL",
+                "value": 960,
+                "proven_optimal": true
+              }
+            ],
+            "elapsed_seconds": 0.01729691692162305,
+            "error": null
+          },
+          "verification": {
+            "case_hash": "0277bf469ee7328ad9f44d50e5337fc3740e1244a5a3d11379ff9795f2633853",
+            "candidate_hash": "e923b414f6fa23664467687d28bcc8e03cae8b70c6072c437ce7b685a9d05391",
+            "verifier_version": "1",
+            "valid": true,
+            "violations": [],
+            "coverage": {
+              "S1:helper": 1,
+              "S1:lead": 1,
+              "S2:helper": 1,
+              "S2:lead": 1,
+              "S3:helper": 1,
+              "S3:lead": 1,
+              "S4:helper": 1,
+              "S4:lead": 1
+            },
+            "workload": {
+              "V01": {
+                "minutes": 240,
+                "shifts": 2
+              },
+              "V02": {
+                "minutes": 240,
+                "shifts": 2
+              },
+              "V03": {
+                "minutes": 120,
+                "shifts": 1
+              },
+              "V04": {
+                "minutes": 120,
+                "shifts": 1
+              },
+              "V05": {
+                "minutes": 120,
+                "shifts": 1
+              },
+              "V06": {
+                "minutes": 120,
+                "shifts": 1
+              }
+            },
+            "preferred": 8,
+            "non_preferred": 0,
+            "replacements": 0,
+            "dispersion": 960
+          }
+        },
+        "diagnosis": null,
+        "proposals": [],
+        "approved": false,
+        "error": null
+      }
+    },
+    {
+      "label": "Cancellation proposal",
+      "elapsed_seconds": 54.33,
+      "trace": [
+        {
+          "seq": 1,
+          "type": "model_round",
+          "status": "running",
+          "detail": "Model round 1"
+        },
+        {
+          "seq": 2,
+          "type": "model_end",
+          "status": "complete",
+          "duration": 9.634,
+          "detail": "Model round 1"
+        },
+        {
+          "seq": 3,
+          "type": "tool_start",
+          "tool": "propose_change",
+          "arguments": {
+            "operations": [
+              {
+                "op": "set_availability",
+                "shift_id": "S2",
+                "status": "unavailable",
+                "volunteer_id": "V02"
+              }
+            ]
+          },
+          "status": "running"
+        },
+        {
+          "seq": 4,
+          "type": "tool_end",
+          "tool": "propose_change",
+          "status": "complete",
+          "result_id": "P_98a7925700324fcc",
+          "duration": 0.003
+        },
+        {
+          "seq": 5,
+          "type": "model_round",
+          "status": "running",
+          "detail": "Model round 2"
+        },
+        {
+          "seq": 6,
+          "type": "model_end",
+          "status": "complete",
+          "duration": 4.545,
+          "detail": "Model round 2"
+        },
+        {
+          "seq": 7,
+          "type": "tool_start",
+          "tool": "simulate_change",
+          "arguments": {
+            "proposal_id": "P_98a7925700324fcc"
+          },
+          "status": "running"
+        },
+        {
+          "seq": 8,
+          "type": "tool_end",
+          "tool": "simulate_change",
+          "status": "complete",
+          "result_id": "R_c5ed9f734a4c42ca",
+          "duration": 0.008
+        },
+        {
+          "seq": 9,
+          "type": "model_round",
+          "status": "running",
+          "detail": "Model round 3"
+        },
+        {
+          "seq": 10,
+          "type": "model_end",
+          "status": "complete",
+          "duration": 25.092,
+          "detail": "Model round 3"
+        },
+        {
+          "seq": 11,
+          "type": "tool_start",
+          "tool": "prepare_review",
+          "arguments": {
+            "result_id": "R_c5ed9f734a4c42ca",
+            "evidence_ids": [
+              "R_c5ed9f734a4c42ca:verification",
+              "R_c5ed9f734a4c42ca:coverage:S1:helper",
+              "R_c5ed9f734a4c42ca:coverage:S1:lead",
+              "R_c5ed9f734a4c42ca:coverage:S2:helper",
+              "R_c5ed9f734a4c42ca:coverage:S2:lead",
+              "R_c5ed9f734a4c42ca:coverage:S3:helper",
+              "R_c5ed9f734a4c42ca:coverage:S3:lead",
+              "R_c5ed9f734a4c42ca:coverage:S4:helper",
+              "R_c5ed9f734a4c42ca:coverage:S4:lead"
+            ]
+          },
+          "status": "running"
+        },
+        {
+          "seq": 12,
+          "type": "tool_end",
+          "tool": "prepare_review",
+          "status": "complete",
+          "result_id": "R_c5ed9f734a4c42ca",
+          "duration": 0.0
+        },
+        {
+          "seq": 13,
+          "type": "model_round",
+          "status": "running",
+          "detail": "Model round 4"
+        },
+        {
+          "seq": 14,
+          "type": "model_end",
+          "status": "complete",
+          "duration": 14.026,
+          "detail": "Model round 4"
+        }
+      ],
+      "result": {
+        "status": "HUMAN_APPROVED",
+        "case_hash": "0277bf469ee7328ad9f44d50e5337fc3740e1244a5a3d11379ff9795f2633853",
+        "revision": 1,
+        "candidate": {
+          "case_hash": "0277bf469ee7328ad9f44d50e5337fc3740e1244a5a3d11379ff9795f2633853",
+          "candidate_hash": "e923b414f6fa23664467687d28bcc8e03cae8b70c6072c437ce7b685a9d05391",
+          "hypothetical": false,
+          "solver": {
+            "case_hash": "0277bf469ee7328ad9f44d50e5337fc3740e1244a5a3d11379ff9795f2633853",
+            "status": "OPTIMAL",
+            "assignments": [
+              {
+                "volunteer_id": "V01",
+                "shift_id": "S1",
+                "role": "lead"
+              },
+              {
+                "volunteer_id": "V01",
+                "shift_id": "S3",
+                "role": "lead"
+              },
+              {
+                "volunteer_id": "V02",
+                "shift_id": "S2",
+                "role": "lead"
+              },
+              {
+                "volunteer_id": "V02",
+                "shift_id": "S4",
+                "role": "lead"
+              },
+              {
+                "volunteer_id": "V03",
+                "shift_id": "S1",
+                "role": "helper"
+              },
+              {
+                "volunteer_id": "V04",
+                "shift_id": "S2",
+                "role": "helper"
+              },
+              {
+                "volunteer_id": "V05",
+                "shift_id": "S3",
+                "role": "helper"
+              },
+              {
+                "volunteer_id": "V06",
+                "shift_id": "S4",
+                "role": "helper"
+              }
+            ],
+            "phases": [
+              {
+                "name": "feasibility",
+                "status": "OPTIMAL",
+                "value": null,
+                "proven_optimal": true
+              },
+              {
+                "name": "replacements",
+                "status": "OPTIMAL",
+                "value": 0,
+                "proven_optimal": true
+              },
+              {
+                "name": "non_preferred",
+                "status": "OPTIMAL",
+                "value": 0,
+                "proven_optimal": true
+              },
+              {
+                "name": "dispersion",
+                "status": "OPTIMAL",
+                "value": 960,
+                "proven_optimal": true
+              }
+            ],
+            "elapsed_seconds": 0.01729691692162305,
+            "error": null
+          },
+          "verification": {
+            "case_hash": "0277bf469ee7328ad9f44d50e5337fc3740e1244a5a3d11379ff9795f2633853",
+            "candidate_hash": "e923b414f6fa23664467687d28bcc8e03cae8b70c6072c437ce7b685a9d05391",
+            "verifier_version": "1",
+            "valid": true,
+            "violations": [],
+            "coverage": {
+              "S1:helper": 1,
+              "S1:lead": 1,
+              "S2:helper": 1,
+              "S2:lead": 1,
+              "S3:helper": 1,
+              "S3:lead": 1,
+              "S4:helper": 1,
+              "S4:lead": 1
+            },
+            "workload": {
+              "V01": {
+                "minutes": 240,
+                "shifts": 2
+              },
+              "V02": {
+                "minutes": 240,
+                "shifts": 2
+              },
+              "V03": {
+                "minutes": 120,
+                "shifts": 1
+              },
+              "V04": {
+                "minutes": 120,
+                "shifts": 1
+              },
+              "V05": {
+                "minutes": 120,
+                "shifts": 1
+              },
+              "V06": {
+                "minutes": 120,
+                "shifts": 1
+              }
+            },
+            "preferred": 8,
+            "non_preferred": 0,
+            "replacements": 0,
+            "dispersion": 960
+          }
+        },
+        "diagnosis": null,
+        "proposals": [
+          {
+            "operations": [
+              {
+                "op": "set_availability",
+                "volunteer_id": "V02",
+                "shift_id": "S2",
+                "status": "unavailable"
+              }
+            ],
+            "base_case_hash": "0277bf469ee7328ad9f44d50e5337fc3740e1244a5a3d11379ff9795f2633853",
+            "simulation": {
+              "case_hash": "501cd5518f84bf135b0b75d6f0c7d39d5e0b7718f6d294a11b3317f27f8a492e",
+              "hypothetical": true,
+              "solver": {
+                "case_hash": "501cd5518f84bf135b0b75d6f0c7d39d5e0b7718f6d294a11b3317f27f8a492e",
+                "status": "OPTIMAL",
+                "assignments": [
+                  {
+                    "volunteer_id": "V01",
+                    "shift_id": "S1",
+                    "role": "lead"
+                  },
+                  {
+                    "volunteer_id": "V01",
+                    "shift_id": "S2",
+                    "role": "lead"
+                  },
+                  {
+                    "volunteer_id": "V02",
+                    "shift_id": "S3",
+                    "role": "lead"
+                  },
+                  {
+                    "volunteer_id": "V02",
+                    "shift_id": "S4",
+                    "role": "lead"
+                  },
+                  {
+                    "volunteer_id": "V03",
+                    "shift_id": "S1",
+                    "role": "helper"
+                  },
+                  {
+                    "volunteer_id": "V04",
+                    "shift_id": "S2",
+                    "role": "helper"
+                  },
+                  {
+                    "volunteer_id": "V05",
+                    "shift_id": "S3",
+                    "role": "helper"
+                  },
+                  {
+                    "volunteer_id": "V06",
+                    "shift_id": "S4",
+                    "role": "helper"
+                  }
+                ],
+                "phases": [
+                  {
+                    "name": "feasibility",
+                    "status": "OPTIMAL",
+                    "value": null,
+                    "proven_optimal": true
+                  },
+                  {
+                    "name": "replacements",
+                    "status": "OPTIMAL",
+                    "value": 2,
+                    "proven_optimal": true
+                  },
+                  {
+                    "name": "non_preferred",
+                    "status": "OPTIMAL",
+                    "value": 2,
+                    "proven_optimal": true
+                  },
+                  {
+                    "name": "dispersion",
+                    "status": "OPTIMAL",
+                    "value": 960,
+                    "proven_optimal": true
+                  }
+                ],
+                "elapsed_seconds": 0.006907040951773524,
+                "error": null
+              },
+              "verification": {
+                "case_hash": "501cd5518f84bf135b0b75d6f0c7d39d5e0b7718f6d294a11b3317f27f8a492e",
+                "candidate_hash": "ea68c8081a101eaafd8ca8707f8b4b6b78648fd93a7dd9f8fd5252bac6d9b50a",
+                "verifier_version": "1",
+                "valid": true,
+                "violations": [],
+                "coverage": {
+                  "S1:helper": 1,
+                  "S1:lead": 1,
+                  "S2:helper": 1,
+                  "S2:lead": 1,
+                  "S3:helper": 1,
+                  "S3:lead": 1,
+                  "S4:helper": 1,
+                  "S4:lead": 1
+                },
+                "workload": {
+                  "V01": {
+                    "minutes": 240,
+                    "shifts": 2
+                  },
+                  "V02": {
+                    "minutes": 240,
+                    "shifts": 2
+                  },
+                  "V03": {
+                    "minutes": 120,
+                    "shifts": 1
+                  },
+                  "V04": {
+                    "minutes": 120,
+                    "shifts": 1
+                  },
+                  "V05": {
+                    "minutes": 120,
+                    "shifts": 1
+                  },
+                  "V06": {
+                    "minutes": 120,
+                    "shifts": 1
+                  }
+                },
+                "preferred": 6,
+                "non_preferred": 2,
+                "replacements": 2,
+                "dispersion": 960
+              },
+              "diagnosis": null
+            }
+          }
+        ],
+        "approved": true,
+        "error": null
+      }
+    },
+    {
+      "label": "Cancellation repair",
+      "elapsed_seconds": 38.305,
+      "trace": [
+        {
+          "seq": 1,
+          "type": "model_round",
+          "status": "running",
+          "detail": "Model round 1"
+        },
+        {
+          "seq": 2,
+          "type": "model_end",
+          "status": "complete",
+          "duration": 5.969,
+          "detail": "Model round 1"
+        },
+        {
+          "seq": 3,
+          "type": "tool_start",
+          "tool": "solve_schedule",
+          "arguments": {},
+          "status": "running"
+        },
+        {
+          "seq": 4,
+          "type": "tool_end",
+          "tool": "solve_schedule",
+          "status": "complete",
+          "result_id": "R_435f6e4fe4094100",
+          "duration": 0.007
+        },
+        {
+          "seq": 5,
+          "type": "model_round",
+          "status": "running",
+          "detail": "Model round 2"
+        },
+        {
+          "seq": 6,
+          "type": "model_end",
+          "status": "complete",
+          "duration": 23.642,
+          "detail": "Model round 2"
+        },
+        {
+          "seq": 7,
+          "type": "tool_start",
+          "tool": "prepare_review",
+          "arguments": {
+            "result_id": "R_435f6e4fe4094100",
+            "evidence_ids": [
+              "R_435f6e4fe4094100:verification",
+              "R_435f6e4fe4094100:coverage:S1:helper",
+              "R_435f6e4fe4094100:coverage:S1:lead",
+              "R_435f6e4fe4094100:coverage:S2:helper",
+              "R_435f6e4fe4094100:coverage:S2:lead",
+              "R_435f6e4fe4094100:coverage:S3:helper",
+              "R_435f6e4fe4094100:coverage:S3:lead",
+              "R_435f6e4fe4094100:coverage:S4:helper",
+              "R_435f6e4fe4094100:coverage:S4:lead"
+            ]
+          },
+          "status": "running"
+        },
+        {
+          "seq": 8,
+          "type": "tool_end",
+          "tool": "prepare_review",
+          "status": "complete",
+          "result_id": "R_435f6e4fe4094100",
+          "duration": 0.0
+        },
+        {
+          "seq": 9,
+          "type": "model_round",
+          "status": "running",
+          "detail": "Model round 3"
+        },
+        {
+          "seq": 10,
+          "type": "model_end",
+          "status": "complete",
+          "duration": 7.343,
+          "detail": "Model round 3"
+        }
+      ],
+      "result": {
+        "status": "VERIFIED_FEASIBLE",
+        "case_hash": "501cd5518f84bf135b0b75d6f0c7d39d5e0b7718f6d294a11b3317f27f8a492e",
+        "revision": 2,
+        "candidate": {
+          "case_hash": "501cd5518f84bf135b0b75d6f0c7d39d5e0b7718f6d294a11b3317f27f8a492e",
+          "candidate_hash": "ea68c8081a101eaafd8ca8707f8b4b6b78648fd93a7dd9f8fd5252bac6d9b50a",
+          "hypothetical": false,
+          "solver": {
+            "case_hash": "501cd5518f84bf135b0b75d6f0c7d39d5e0b7718f6d294a11b3317f27f8a492e",
+            "status": "OPTIMAL",
+            "assignments": [
+              {
+                "volunteer_id": "V01",
+                "shift_id": "S1",
+                "role": "lead"
+              },
+              {
+                "volunteer_id": "V01",
+                "shift_id": "S2",
+                "role": "lead"
+              },
+              {
+                "volunteer_id": "V02",
+                "shift_id": "S3",
+                "role": "lead"
+              },
+              {
+                "volunteer_id": "V02",
+                "shift_id": "S4",
+                "role": "lead"
+              },
+              {
+                "volunteer_id": "V03",
+                "shift_id": "S1",
+                "role": "helper"
+              },
+              {
+                "volunteer_id": "V04",
+                "shift_id": "S2",
+                "role": "helper"
+              },
+              {
+                "volunteer_id": "V05",
+                "shift_id": "S3",
+                "role": "helper"
+              },
+              {
+                "volunteer_id": "V06",
+                "shift_id": "S4",
+                "role": "helper"
+              }
+            ],
+            "phases": [
+              {
+                "name": "feasibility",
+                "status": "OPTIMAL",
+                "value": null,
+                "proven_optimal": true
+              },
+              {
+                "name": "replacements",
+                "status": "OPTIMAL",
+                "value": 2,
+                "proven_optimal": true
+              },
+              {
+                "name": "non_preferred",
+                "status": "OPTIMAL",
+                "value": 2,
+                "proven_optimal": true
+              },
+              {
+                "name": "dispersion",
+                "status": "OPTIMAL",
+                "value": 960,
+                "proven_optimal": true
+              }
+            ],
+            "elapsed_seconds": 0.006462167017161846,
+            "error": null
+          },
+          "verification": {
+            "case_hash": "501cd5518f84bf135b0b75d6f0c7d39d5e0b7718f6d294a11b3317f27f8a492e",
+            "candidate_hash": "ea68c8081a101eaafd8ca8707f8b4b6b78648fd93a7dd9f8fd5252bac6d9b50a",
+            "verifier_version": "1",
+            "valid": true,
+            "violations": [],
+            "coverage": {
+              "S1:helper": 1,
+              "S1:lead": 1,
+              "S2:helper": 1,
+              "S2:lead": 1,
+              "S3:helper": 1,
+              "S3:lead": 1,
+              "S4:helper": 1,
+              "S4:lead": 1
+            },
+            "workload": {
+              "V01": {
+                "minutes": 240,
+                "shifts": 2
+              },
+              "V02": {
+                "minutes": 240,
+                "shifts": 2
+              },
+              "V03": {
+                "minutes": 120,
+                "shifts": 1
+              },
+              "V04": {
+                "minutes": 120,
+                "shifts": 1
+              },
+              "V05": {
+                "minutes": 120,
+                "shifts": 1
+              },
+              "V06": {
+                "minutes": 120,
+                "shifts": 1
+              }
+            },
+            "preferred": 6,
+            "non_preferred": 2,
+            "replacements": 2,
+            "dispersion": 960
+          }
+        },
+        "diagnosis": null,
+        "proposals": [],
+        "approved": false,
+        "error": null
+      }
+    },
+    {
+      "label": "Second cancellation proposal",
+      "elapsed_seconds": 35.511,
+      "trace": [
+        {
+          "seq": 1,
+          "type": "model_round",
+          "status": "running",
+          "detail": "Model round 1"
+        },
+        {
+          "seq": 2,
+          "type": "model_end",
+          "status": "complete",
+          "duration": 9.901,
+          "detail": "Model round 1"
+        },
+        {
+          "seq": 3,
+          "type": "tool_start",
+          "tool": "propose_change",
+          "arguments": {
+            "operations": [
+              {
+                "op": "set_availability",
+                "shift_id": "S3",
+                "status": "unavailable",
+                "volunteer_id": "V02"
+              }
+            ]
+          },
+          "status": "running"
+        },
+        {
+          "seq": 4,
+          "type": "tool_end",
+          "tool": "propose_change",
+          "status": "complete",
+          "result_id": "P_d71afbe5cf774841",
+          "duration": 0.001
+        },
+        {
+          "seq": 5,
+          "type": "model_round",
+          "status": "running",
+          "detail": "Model round 2"
+        },
+        {
+          "seq": 6,
+          "type": "model_end",
+          "status": "complete",
+          "duration": 4.435,
+          "detail": "Model round 2"
+        },
+        {
+          "seq": 7,
+          "type": "tool_start",
+          "tool": "simulate_change",
+          "arguments": {
+            "proposal_id": "P_d71afbe5cf774841"
+          },
+          "status": "running"
+        },
+        {
+          "seq": 8,
+          "type": "tool_end",
+          "tool": "simulate_change",
+          "status": "complete",
+          "result_id": "R_4872fb45092941d3",
+          "duration": 0.004
+        },
+        {
+          "seq": 9,
+          "type": "model_round",
+          "status": "running",
+          "detail": "Model round 3"
+        },
+        {
+          "seq": 10,
+          "type": "model_end",
+          "status": "complete",
+          "duration": 14.416,
+          "detail": "Model round 3"
+        },
+        {
+          "seq": 11,
+          "type": "tool_start",
+          "tool": "prepare_review",
+          "arguments": {
+            "result_id": "R_4872fb45092941d3",
+            "evidence_ids": [
+              "R_4872fb45092941d3:sole-capacity:V01:lead"
+            ]
+          },
+          "status": "running"
+        },
+        {
+          "seq": 12,
+          "type": "tool_end",
+          "tool": "prepare_review",
+          "status": "complete",
+          "result_id": "R_4872fb45092941d3",
+          "duration": 0.0
+        },
+        {
+          "seq": 13,
+          "type": "model_round",
+          "status": "running",
+          "detail": "Model round 4"
+        },
+        {
+          "seq": 14,
+          "type": "model_end",
+          "status": "complete",
+          "duration": 5.664,
+          "detail": "Model round 4"
+        }
+      ],
+      "result": {
+        "status": "HUMAN_APPROVED",
+        "case_hash": "501cd5518f84bf135b0b75d6f0c7d39d5e0b7718f6d294a11b3317f27f8a492e",
+        "revision": 2,
+        "candidate": {
+          "case_hash": "501cd5518f84bf135b0b75d6f0c7d39d5e0b7718f6d294a11b3317f27f8a492e",
+          "candidate_hash": "ea68c8081a101eaafd8ca8707f8b4b6b78648fd93a7dd9f8fd5252bac6d9b50a",
+          "hypothetical": false,
+          "solver": {
+            "case_hash": "501cd5518f84bf135b0b75d6f0c7d39d5e0b7718f6d294a11b3317f27f8a492e",
+            "status": "OPTIMAL",
+            "assignments": [
+              {
+                "volunteer_id": "V01",
+                "shift_id": "S1",
+                "role": "lead"
+              },
+              {
+                "volunteer_id": "V01",
+                "shift_id": "S2",
+                "role": "lead"
+              },
+              {
+                "volunteer_id": "V02",
+                "shift_id": "S3",
+                "role": "lead"
+              },
+              {
+                "volunteer_id": "V02",
+                "shift_id": "S4",
+                "role": "lead"
+              },
+              {
+                "volunteer_id": "V03",
+                "shift_id": "S1",
+                "role": "helper"
+              },
+              {
+                "volunteer_id": "V04",
+                "shift_id": "S2",
+                "role": "helper"
+              },
+              {
+                "volunteer_id": "V05",
+                "shift_id": "S3",
+                "role": "helper"
+              },
+              {
+                "volunteer_id": "V06",
+                "shift_id": "S4",
+                "role": "helper"
+              }
+            ],
+            "phases": [
+              {
+                "name": "feasibility",
+                "status": "OPTIMAL",
+                "value": null,
+                "proven_optimal": true
+              },
+              {
+                "name": "replacements",
+                "status": "OPTIMAL",
+                "value": 2,
+                "proven_optimal": true
+              },
+              {
+                "name": "non_preferred",
+                "status": "OPTIMAL",
+                "value": 2,
+                "proven_optimal": true
+              },
+              {
+                "name": "dispersion",
+                "status": "OPTIMAL",
+                "value": 960,
+                "proven_optimal": true
+              }
+            ],
+            "elapsed_seconds": 0.006462167017161846,
+            "error": null
+          },
+          "verification": {
+            "case_hash": "501cd5518f84bf135b0b75d6f0c7d39d5e0b7718f6d294a11b3317f27f8a492e",
+            "candidate_hash": "ea68c8081a101eaafd8ca8707f8b4b6b78648fd93a7dd9f8fd5252bac6d9b50a",
+            "verifier_version": "1",
+            "valid": true,
+            "violations": [],
+            "coverage": {
+              "S1:helper": 1,
+              "S1:lead": 1,
+              "S2:helper": 1,
+              "S2:lead": 1,
+              "S3:helper": 1,
+              "S3:lead": 1,
+              "S4:helper": 1,
+              "S4:lead": 1
+            },
+            "workload": {
+              "V01": {
+                "minutes": 240,
+                "shifts": 2
+              },
+              "V02": {
+                "minutes": 240,
+                "shifts": 2
+              },
+              "V03": {
+                "minutes": 120,
+                "shifts": 1
+              },
+              "V04": {
+                "minutes": 120,
+                "shifts": 1
+              },
+              "V05": {
+                "minutes": 120,
+                "shifts": 1
+              },
+              "V06": {
+                "minutes": 120,
+                "shifts": 1
+              }
+            },
+            "preferred": 6,
+            "non_preferred": 2,
+            "replacements": 2,
+            "dispersion": 960
+          }
+        },
+        "diagnosis": null,
+        "proposals": [
+          {
+            "operations": [
+              {
+                "op": "set_availability",
+                "volunteer_id": "V02",
+                "shift_id": "S3",
+                "status": "unavailable"
+              }
+            ],
+            "base_case_hash": "501cd5518f84bf135b0b75d6f0c7d39d5e0b7718f6d294a11b3317f27f8a492e",
+            "simulation": {
+              "case_hash": "fefd525add903986c5627c1102de2f13c9dfda908267630a34333294ec99a41f",
+              "hypothetical": true,
+              "solver": {
+                "case_hash": "fefd525add903986c5627c1102de2f13c9dfda908267630a34333294ec99a41f",
+                "status": "INFEASIBLE",
+                "assignments": [],
+                "phases": [
+                  {
+                    "name": "feasibility",
+                    "status": "INFEASIBLE",
+                    "value": null,
+                    "proven_optimal": false
+                  }
+                ],
+                "elapsed_seconds": 0.0032954580383375287,
+                "error": null
+              },
+              "verification": null,
+              "diagnosis": {
+                "case_hash": "fefd525add903986c5627c1102de2f13c9dfda908267630a34333294ec99a41f",
+                "status": "INFEASIBLE",
+                "proof_kind": "direct",
+                "facts": [
+                  {
+                    "fact_id": "sole-capacity:V01:lead",
+                    "code": "sole_eligible_capacity",
+                    "entity_ids": [
+                      "V01",
+                      "S1",
+                      "S2",
+                      "S3",
+                      "lead"
+                    ],
+                    "source_refs": [
+                      "coverage.csv:2",
+                      "coverage.csv:4",
+                      "coverage.csv:6",
+                      "volunteers.csv:2",
+                      "availability.csv:2",
+                      "availability.csv:3",
+                      "availability.csv:4",
+                      "proposal:P_98a7925700324fcc",
+                      "proposal:P_d71afbe5cf774841",
+                      "policy:missing_availability_unavailable"
+                    ],
+                    "details": {
+                      "required_shifts": 3,
+                      "max_shifts": 2,
+                      "required_minutes": 360,
+                      "max_total_minutes": 240
+                    }
+                  }
+                ],
+                "conflict_demands": [],
+                "subset_minimal": false,
+                "solver_calls": 0,
+                "elapsed_seconds": 0.0001467500114813447,
+                "limitation": ""
+              }
+            }
+          }
+        ],
+        "approved": true,
+        "error": null
+      }
+    },
+    {
+      "label": "Infeasible case",
+      "elapsed_seconds": 59.428,
+      "trace": [
+        {
+          "seq": 1,
+          "type": "model_round",
+          "status": "running",
+          "detail": "Model round 1"
+        },
+        {
+          "seq": 2,
+          "type": "model_end",
+          "status": "complete",
+          "duration": 6.969,
+          "detail": "Model round 1"
+        },
+        {
+          "seq": 3,
+          "type": "tool_start",
+          "tool": "inspect_case",
+          "arguments": {},
+          "status": "running"
+        },
+        {
+          "seq": 4,
+          "type": "tool_end",
+          "tool": "inspect_case",
+          "status": "complete",
+          "result_id": null,
+          "duration": 0.001
+        },
+        {
+          "seq": 5,
+          "type": "model_round",
+          "status": "running",
+          "detail": "Model round 2"
+        },
+        {
+          "seq": 6,
+          "type": "model_end",
+          "status": "complete",
+          "duration": 22.766,
+          "detail": "Model round 2"
+        },
+        {
+          "seq": 7,
+          "type": "tool_start",
+          "tool": "solve_schedule",
+          "arguments": {},
+          "status": "running"
+        },
+        {
+          "seq": 8,
+          "type": "tool_end",
+          "tool": "solve_schedule",
+          "status": "complete",
+          "result_id": "R_f3b816089d404325",
+          "duration": 0.021
+        },
+        {
+          "seq": 9,
+          "type": "model_round",
+          "status": "running",
+          "detail": "Model round 3"
+        },
+        {
+          "seq": 10,
+          "type": "model_end",
+          "status": "complete",
+          "duration": 3.753,
+          "detail": "Model round 3"
+        },
+        {
+          "seq": 11,
+          "type": "tool_start",
+          "tool": "diagnose_infeasibility",
+          "arguments": {},
+          "status": "running"
+        },
+        {
+          "seq": 12,
+          "type": "tool_end",
+          "tool": "diagnose_infeasibility",
+          "status": "complete",
+          "result_id": "R_f3b816089d404325",
+          "duration": 0.0
+        },
+        {
+          "seq": 13,
+          "type": "model_round",
+          "status": "running",
+          "detail": "Model round 4"
+        },
+        {
+          "seq": 14,
+          "type": "model_end",
+          "status": "complete",
+          "duration": 19.822,
+          "detail": "Model round 4"
+        },
+        {
+          "seq": 15,
+          "type": "tool_start",
+          "tool": "prepare_review",
+          "arguments": {
+            "result_id": "R_f3b816089d404325",
+            "evidence_ids": [
+              "R_f3b816089d404325:sole-capacity:V01:lead"
+            ]
+          },
+          "status": "running"
+        },
+        {
+          "seq": 16,
+          "type": "tool_end",
+          "tool": "prepare_review",
+          "status": "complete",
+          "result_id": "R_f3b816089d404325",
+          "duration": 0.0
+        },
+        {
+          "seq": 17,
+          "type": "model_round",
+          "status": "running",
+          "detail": "Model round 5"
+        },
+        {
+          "seq": 18,
+          "type": "model_end",
+          "status": "complete",
+          "duration": 4.272,
+          "detail": "Model round 5"
+        }
+      ],
+      "result": {
+        "status": "INFEASIBLE",
+        "case_hash": "fefd525add903986c5627c1102de2f13c9dfda908267630a34333294ec99a41f",
+        "revision": 3,
+        "candidate": {
+          "case_hash": "fefd525add903986c5627c1102de2f13c9dfda908267630a34333294ec99a41f",
+          "candidate_hash": null,
+          "hypothetical": false,
+          "solver": {
+            "case_hash": "fefd525add903986c5627c1102de2f13c9dfda908267630a34333294ec99a41f",
+            "status": "INFEASIBLE",
+            "assignments": [],
+            "phases": [
+              {
+                "name": "feasibility",
+                "status": "INFEASIBLE",
+                "value": null,
+                "proven_optimal": false
+              }
+            ],
+            "elapsed_seconds": 0.02115970803424716,
+            "error": null
+          },
+          "verification": null
+        },
+        "diagnosis": {
+          "case_hash": "fefd525add903986c5627c1102de2f13c9dfda908267630a34333294ec99a41f",
+          "status": "INFEASIBLE",
+          "proof_kind": "direct",
+          "facts": [
+            {
+              "fact_id": "sole-capacity:V01:lead",
+              "code": "sole_eligible_capacity",
+              "entity_ids": [
+                "V01",
+                "S1",
+                "S2",
+                "S3",
+                "lead"
+              ],
+              "source_refs": [
+                "coverage.csv:2",
+                "coverage.csv:4",
+                "coverage.csv:6",
+                "volunteers.csv:2",
+                "availability.csv:2",
+                "availability.csv:3",
+                "availability.csv:4",
+                "proposal:P_98a7925700324fcc",
+                "proposal:P_d71afbe5cf774841",
+                "policy:missing_availability_unavailable"
+              ],
+              "details": {
+                "required_shifts": 3,
+                "max_shifts": 2,
+                "required_minutes": 360,
+                "max_total_minutes": 240
+              }
+            }
+          ],
+          "conflict_demands": [],
+          "subset_minimal": false,
+          "solver_calls": 0,
+          "elapsed_seconds": 0.00020420807413756847,
+          "limitation": ""
+        },
+        "proposals": [],
+        "approved": false,
+        "error": null
+      }
+    },
+    {
+      "label": "Hypothetical repairs",
+      "elapsed_seconds": 89.631,
+      "trace": [
+        {
+          "seq": 1,
+          "type": "model_round",
+          "status": "running",
+          "detail": "Model round 1"
+        },
+        {
+          "seq": 2,
+          "type": "model_end",
+          "status": "complete",
+          "duration": 9.798,
+          "detail": "Model round 1"
+        },
+        {
+          "seq": 3,
+          "type": "tool_start",
+          "tool": "inspect_case",
+          "arguments": {},
+          "status": "running"
+        },
+        {
+          "seq": 4,
+          "type": "tool_end",
+          "tool": "inspect_case",
+          "status": "complete",
+          "result_id": null,
+          "duration": 0.0
+        },
+        {
+          "seq": 5,
+          "type": "model_round",
+          "status": "running",
+          "detail": "Model round 2"
+        },
+        {
+          "seq": 6,
+          "type": "model_end",
+          "status": "complete",
+          "duration": 15.739,
+          "detail": "Model round 2"
+        },
+        {
+          "seq": 7,
+          "type": "tool_start",
+          "tool": "propose_change",
+          "arguments": {
+            "operations": [
+              {
+                "op": "set_availability",
+                "shift_id": "S3",
+                "status": "available",
+                "volunteer_id": "V02"
+              }
+            ]
+          },
+          "status": "running"
+        },
+        {
+          "seq": 8,
+          "type": "tool_end",
+          "tool": "propose_change",
+          "status": "complete",
+          "result_id": "P_df65a651498043ce",
+          "duration": 0.001
+        },
+        {
+          "seq": 9,
+          "type": "tool_start",
+          "tool": "propose_change",
+          "arguments": {
+            "operations": [
+              {
+                "max_shifts": 3,
+                "max_total_minutes": 360,
+                "op": "set_limits",
+                "volunteer_id": "V01"
+              }
+            ]
+          },
+          "status": "running"
+        },
+        {
+          "seq": 10,
+          "type": "tool_end",
+          "tool": "propose_change",
+          "status": "complete",
+          "result_id": "P_8f7600fd329d4934",
+          "duration": 0.0
+        },
+        {
+          "seq": 11,
+          "type": "model_round",
+          "status": "running",
+          "detail": "Model round 3"
+        },
+        {
+          "seq": 12,
+          "type": "model_end",
+          "status": "complete",
+          "duration": 10.614,
+          "detail": "Model round 3"
+        },
+        {
+          "seq": 13,
+          "type": "tool_start",
+          "tool": "simulate_change",
+          "arguments": {
+            "proposal_id": "P_df65a651498043ce"
+          },
+          "status": "running"
+        },
+        {
+          "seq": 14,
+          "type": "tool_end",
+          "tool": "simulate_change",
+          "status": "complete",
+          "result_id": "R_0f25fa0cc3c8443b",
+          "duration": 0.022
+        },
+        {
+          "seq": 15,
+          "type": "model_round",
+          "status": "running",
+          "detail": "Model round 4"
+        },
+        {
+          "seq": 16,
+          "type": "model_end",
+          "status": "complete",
+          "duration": 8.471,
+          "detail": "Model round 4"
+        },
+        {
+          "seq": 17,
+          "type": "tool_start",
+          "tool": "simulate_change",
+          "arguments": {
+            "proposal_id": "P_8f7600fd329d4934"
+          },
+          "status": "running"
+        },
+        {
+          "seq": 18,
+          "type": "tool_end",
+          "tool": "simulate_change",
+          "status": "complete",
+          "result_id": "R_7c08ea16cfa54817",
+          "duration": 0.004
+        },
+        {
+          "seq": 19,
+          "type": "model_round",
+          "status": "running",
+          "detail": "Model round 5"
+        },
+        {
+          "seq": 20,
+          "type": "model_end",
+          "status": "complete",
+          "duration": 19.974,
+          "detail": "Model round 5"
+        },
+        {
+          "seq": 21,
+          "type": "tool_start",
+          "tool": "prepare_review",
+          "arguments": {
+            "result_id": "R_0f25fa0cc3c8443b",
+            "evidence_ids": [
+              "R_0f25fa0cc3c8443b:verification",
+              "R_0f25fa0cc3c8443b:coverage:S3:helper",
+              "R_0f25fa0cc3c8443b:coverage:S3:lead"
+            ]
+          },
+          "status": "running"
+        },
+        {
+          "seq": 22,
+          "type": "tool_end",
+          "tool": "prepare_review",
+          "status": "complete",
+          "result_id": "R_0f25fa0cc3c8443b",
+          "duration": 0.0
+        },
+        {
+          "seq": 23,
+          "type": "model_round",
+          "status": "running",
+          "detail": "Model round 6"
+        },
+        {
+          "seq": 24,
+          "type": "model_end",
+          "status": "complete",
+          "duration": 9.123,
+          "detail": "Model round 6"
+        },
+        {
+          "seq": 25,
+          "type": "tool_start",
+          "tool": "prepare_review",
+          "arguments": {
+            "result_id": "R_7c08ea16cfa54817",
+            "evidence_ids": [
+              "R_7c08ea16cfa54817:verification",
+              "R_7c08ea16cfa54817:coverage:S3:helper",
+              "R_7c08ea16cfa54817:coverage:S3:lead"
+            ]
+          },
+          "status": "running"
+        },
+        {
+          "seq": 26,
+          "type": "tool_end",
+          "tool": "prepare_review",
+          "status": "complete",
+          "result_id": "R_7c08ea16cfa54817",
+          "duration": 0.0
+        },
+        {
+          "seq": 27,
+          "type": "model_round",
+          "status": "running",
+          "detail": "Model round 7"
+        },
+        {
+          "seq": 28,
+          "type": "model_end",
+          "status": "complete",
+          "duration": 14.573,
+          "detail": "Model round 7"
+        }
+      ],
+      "result": {
+        "status": "INFEASIBLE",
+        "case_hash": "fefd525add903986c5627c1102de2f13c9dfda908267630a34333294ec99a41f",
+        "revision": 3,
+        "candidate": {
+          "case_hash": "fefd525add903986c5627c1102de2f13c9dfda908267630a34333294ec99a41f",
+          "candidate_hash": null,
+          "hypothetical": false,
+          "solver": {
+            "case_hash": "fefd525add903986c5627c1102de2f13c9dfda908267630a34333294ec99a41f",
+            "status": "INFEASIBLE",
+            "assignments": [],
+            "phases": [
+              {
+                "name": "feasibility",
+                "status": "INFEASIBLE",
+                "value": null,
+                "proven_optimal": false
+              }
+            ],
+            "elapsed_seconds": 0.02115970803424716,
+            "error": null
+          },
+          "verification": null
+        },
+        "diagnosis": {
+          "case_hash": "fefd525add903986c5627c1102de2f13c9dfda908267630a34333294ec99a41f",
+          "status": "INFEASIBLE",
+          "proof_kind": "direct",
+          "facts": [
+            {
+              "fact_id": "sole-capacity:V01:lead",
+              "code": "sole_eligible_capacity",
+              "entity_ids": [
+                "V01",
+                "S1",
+                "S2",
+                "S3",
+                "lead"
+              ],
+              "source_refs": [
+                "coverage.csv:2",
+                "coverage.csv:4",
+                "coverage.csv:6",
+                "volunteers.csv:2",
+                "availability.csv:2",
+                "availability.csv:3",
+                "availability.csv:4",
+                "proposal:P_98a7925700324fcc",
+                "proposal:P_d71afbe5cf774841",
+                "policy:missing_availability_unavailable"
+              ],
+              "details": {
+                "required_shifts": 3,
+                "max_shifts": 2,
+                "required_minutes": 360,
+                "max_total_minutes": 240
+              }
+            }
+          ],
+          "conflict_demands": [],
+          "subset_minimal": false,
+          "solver_calls": 0,
+          "elapsed_seconds": 0.00020420807413756847,
+          "limitation": ""
+        },
+        "proposals": [
+          {
+            "operations": [
+              {
+                "op": "set_availability",
+                "volunteer_id": "V02",
+                "shift_id": "S3",
+                "status": "available"
+              }
+            ],
+            "base_case_hash": "fefd525add903986c5627c1102de2f13c9dfda908267630a34333294ec99a41f",
+            "simulation": {
+              "case_hash": "4473da13e7f1da44fc0a27b5cf2878dd62dcef06381349792bbe18549d9430e6",
+              "hypothetical": true,
+              "solver": {
+                "case_hash": "4473da13e7f1da44fc0a27b5cf2878dd62dcef06381349792bbe18549d9430e6",
+                "status": "OPTIMAL",
+                "assignments": [
+                  {
+                    "volunteer_id": "V01",
+                    "shift_id": "S1",
+                    "role": "lead"
+                  },
+                  {
+                    "volunteer_id": "V01",
+                    "shift_id": "S2",
+                    "role": "lead"
+                  },
+                  {
+                    "volunteer_id": "V02",
+                    "shift_id": "S3",
+                    "role": "lead"
+                  },
+                  {
+                    "volunteer_id": "V02",
+                    "shift_id": "S4",
+                    "role": "lead"
+                  },
+                  {
+                    "volunteer_id": "V03",
+                    "shift_id": "S1",
+                    "role": "helper"
+                  },
+                  {
+                    "volunteer_id": "V04",
+                    "shift_id": "S2",
+                    "role": "helper"
+                  },
+                  {
+                    "volunteer_id": "V05",
+                    "shift_id": "S3",
+                    "role": "helper"
+                  },
+                  {
+                    "volunteer_id": "V06",
+                    "shift_id": "S4",
+                    "role": "helper"
+                  }
+                ],
+                "phases": [
+                  {
+                    "name": "feasibility",
+                    "status": "OPTIMAL",
+                    "value": null,
+                    "proven_optimal": true
+                  },
+                  {
+                    "name": "replacements",
+                    "status": "OPTIMAL",
+                    "value": 0,
+                    "proven_optimal": true
+                  },
+                  {
+                    "name": "non_preferred",
+                    "status": "OPTIMAL",
+                    "value": 2,
+                    "proven_optimal": true
+                  },
+                  {
+                    "name": "dispersion",
+                    "status": "OPTIMAL",
+                    "value": 960,
+                    "proven_optimal": true
+                  }
+                ],
+                "elapsed_seconds": 0.021305916947312653,
+                "error": null
+              },
+              "verification": {
+                "case_hash": "4473da13e7f1da44fc0a27b5cf2878dd62dcef06381349792bbe18549d9430e6",
+                "candidate_hash": "422e8aaca47821f0acc06a824650224a118e25ce856d60c069c1f6c6e2be1fd7",
+                "verifier_version": "1",
+                "valid": true,
+                "violations": [],
+                "coverage": {
+                  "S1:helper": 1,
+                  "S1:lead": 1,
+                  "S2:helper": 1,
+                  "S2:lead": 1,
+                  "S3:helper": 1,
+                  "S3:lead": 1,
+                  "S4:helper": 1,
+                  "S4:lead": 1
+                },
+                "workload": {
+                  "V01": {
+                    "minutes": 240,
+                    "shifts": 2
+                  },
+                  "V02": {
+                    "minutes": 240,
+                    "shifts": 2
+                  },
+                  "V03": {
+                    "minutes": 120,
+                    "shifts": 1
+                  },
+                  "V04": {
+                    "minutes": 120,
+                    "shifts": 1
+                  },
+                  "V05": {
+                    "minutes": 120,
+                    "shifts": 1
+                  },
+                  "V06": {
+                    "minutes": 120,
+                    "shifts": 1
+                  }
+                },
+                "preferred": 6,
+                "non_preferred": 2,
+                "replacements": 0,
+                "dispersion": 960
+              },
+              "diagnosis": null
+            }
+          },
+          {
+            "operations": [
+              {
+                "op": "set_limits",
+                "volunteer_id": "V01",
+                "max_total_minutes": 360,
+                "max_shifts": 3
+              }
+            ],
+            "base_case_hash": "fefd525add903986c5627c1102de2f13c9dfda908267630a34333294ec99a41f",
+            "simulation": {
+              "case_hash": "10eb8e2e0faf40bb82b074ad7285856045114e1213da4cb9d47594a834572d6a",
+              "hypothetical": true,
+              "solver": {
+                "case_hash": "10eb8e2e0faf40bb82b074ad7285856045114e1213da4cb9d47594a834572d6a",
+                "status": "OPTIMAL",
+                "assignments": [
+                  {
+                    "volunteer_id": "V01",
+                    "shift_id": "S1",
+                    "role": "lead"
+                  },
+                  {
+                    "volunteer_id": "V01",
+                    "shift_id": "S2",
+                    "role": "lead"
+                  },
+                  {
+                    "volunteer_id": "V01",
+                    "shift_id": "S3",
+                    "role": "lead"
+                  },
+                  {
+                    "volunteer_id": "V02",
+                    "shift_id": "S4",
+                    "role": "lead"
+                  },
+                  {
+                    "volunteer_id": "V03",
+                    "shift_id": "S1",
+                    "role": "helper"
+                  },
+                  {
+                    "volunteer_id": "V04",
+                    "shift_id": "S2",
+                    "role": "helper"
+                  },
+                  {
+                    "volunteer_id": "V05",
+                    "shift_id": "S3",
+                    "role": "helper"
+                  },
+                  {
+                    "volunteer_id": "V06",
+                    "shift_id": "S4",
+                    "role": "helper"
+                  }
+                ],
+                "phases": [
+                  {
+                    "name": "feasibility",
+                    "status": "OPTIMAL",
+                    "value": null,
+                    "proven_optimal": true
+                  },
+                  {
+                    "name": "replacements",
+                    "status": "OPTIMAL",
+                    "value": 1,
+                    "proven_optimal": true
+                  },
+                  {
+                    "name": "non_preferred",
+                    "status": "OPTIMAL",
+                    "value": 1,
+                    "proven_optimal": true
+                  },
+                  {
+                    "name": "dispersion",
+                    "status": "OPTIMAL",
+                    "value": 1200,
+                    "proven_optimal": true
+                  }
+                ],
+                "elapsed_seconds": 0.0035541660618036985,
+                "error": null
+              },
+              "verification": {
+                "case_hash": "10eb8e2e0faf40bb82b074ad7285856045114e1213da4cb9d47594a834572d6a",
+                "candidate_hash": "ed1fe4b8a5c3119f728760637842808b10d1554050f73fdfcd9d821cf382cb9a",
+                "verifier_version": "1",
+                "valid": true,
+                "violations": [],
+                "coverage": {
+                  "S1:helper": 1,
+                  "S1:lead": 1,
+                  "S2:helper": 1,
+                  "S2:lead": 1,
+                  "S3:helper": 1,
+                  "S3:lead": 1,
+                  "S4:helper": 1,
+                  "S4:lead": 1
+                },
+                "workload": {
+                  "V01": {
+                    "minutes": 360,
+                    "shifts": 3
+                  },
+                  "V02": {
+                    "minutes": 120,
+                    "shifts": 1
+                  },
+                  "V03": {
+                    "minutes": 120,
+                    "shifts": 1
+                  },
+                  "V04": {
+                    "minutes": 120,
+                    "shifts": 1
+                  },
+                  "V05": {
+                    "minutes": 120,
+                    "shifts": 1
+                  },
+                  "V06": {
+                    "minutes": 120,
+                    "shifts": 1
+                  }
+                },
+                "preferred": 7,
+                "non_preferred": 1,
+                "replacements": 1,
+                "dispersion": 1200
+              },
+              "diagnosis": null
+            }
+          }
+        ],
+        "approved": false,
+        "error": null
+      }
+    }
+  ],
+  "timeline": [
+    {
+      "at_seconds": 0.023,
+      "text": "Baseline: starting genuine local Strands run"
+    },
+    {
+      "at_seconds": 12.103,
+      "text": "Model round 1: complete (11.152s)"
+    },
+    {
+      "at_seconds": 12.103,
+      "text": "inspect_case: complete (0.001s)"
+    },
+    {
+      "at_seconds": 16.785,
+      "text": "Model round 2: complete (4.766s)"
+    },
+    {
+      "at_seconds": 16.785,
+      "text": "solve_schedule: complete (0.018s)"
+    },
+    {
+      "at_seconds": 39.038,
+      "text": "Model round 3: complete (22.043s)"
+    },
+    {
+      "at_seconds": 39.038,
+      "text": "prepare_review: complete (0.0s)"
+    },
+    {
+      "at_seconds": 47.346,
+      "text": "Model round 4: complete (8.25s)"
+    },
+    {
+      "at_seconds": 47.346,
+      "text": "Baseline: VERIFIED_FEASIBLE"
+    },
+    {
+      "at_seconds": 47.384,
+      "text": "Synthetic operator approved baseline; actual bundle contains 8 calendar events"
+    },
+    {
+      "at_seconds": 47.384,
+      "text": "Cancellation proposal: starting genuine local Strands run"
+    },
+    {
+      "at_seconds": 58.324,
+      "text": "Model round 1: complete (9.634s)"
+    },
+    {
+      "at_seconds": 58.324,
+      "text": "propose_change: complete (0.003s)"
+    },
+    {
+      "at_seconds": 62.979,
+      "text": "Model round 2: complete (4.545s)"
+    },
+    {
+      "at_seconds": 62.979,
+      "text": "simulate_change: complete (0.008s)"
+    },
+    {
+      "at_seconds": 88.061,
+      "text": "Model round 3: complete (25.092s)"
+    },
+    {
+      "at_seconds": 88.061,
+      "text": "prepare_review: complete (0.0s)"
+    },
+    {
+      "at_seconds": 101.715,
+      "text": "Model round 4: complete (14.026s)"
+    },
+    {
+      "at_seconds": 101.715,
+      "text": "Cancellation proposal: HUMAN_APPROVED"
+    },
+    {
+      "at_seconds": 101.727,
+      "text": "Synthetic operator applied the reviewed change; previous schedule approval revoked"
+    },
+    {
+      "at_seconds": 101.727,
+      "text": "Cancellation repair: starting genuine local Strands run"
+    },
+    {
+      "at_seconds": 109.008,
+      "text": "Model round 1: complete (5.969s)"
+    },
+    {
+      "at_seconds": 109.008,
+      "text": "solve_schedule: complete (0.007s)"
+    },
+    {
+      "at_seconds": 132.277,
+      "text": "Model round 2: complete (23.642s)"
+    },
+    {
+      "at_seconds": 132.277,
+      "text": "prepare_review: complete (0.0s)"
+    },
+    {
+      "at_seconds": 140.032,
+      "text": "Model round 3: complete (7.343s)"
+    },
+    {
+      "at_seconds": 140.032,
+      "text": "Cancellation repair: VERIFIED_FEASIBLE"
+    },
+    {
+      "at_seconds": 140.07,
+      "text": "Synthetic operator approved repair; actual bundle contains 8 calendar events"
+    },
+    {
+      "at_seconds": 140.07,
+      "text": "Second cancellation proposal: starting genuine local Strands run"
+    },
+    {
+      "at_seconds": 150.985,
+      "text": "Model round 1: complete (9.901s)"
+    },
+    {
+      "at_seconds": 150.985,
+      "text": "propose_change: complete (0.001s)"
+    },
+    {
+      "at_seconds": 155.642,
+      "text": "Model round 2: complete (4.435s)"
+    },
+    {
+      "at_seconds": 155.642,
+      "text": "simulate_change: complete (0.004s)"
+    },
+    {
+      "at_seconds": 170.181,
+      "text": "Model round 3: complete (14.416s)"
+    },
+    {
+      "at_seconds": 170.181,
+      "text": "prepare_review: complete (0.0s)"
+    },
+    {
+      "at_seconds": 175.581,
+      "text": "Model round 4: complete (5.664s)"
+    },
+    {
+      "at_seconds": 175.581,
+      "text": "Second cancellation proposal: HUMAN_APPROVED"
+    },
+    {
+      "at_seconds": 175.595,
+      "text": "Synthetic operator applied the reviewed change; previous schedule approval revoked"
+    },
+    {
+      "at_seconds": 175.595,
+      "text": "Infeasible case: starting genuine local Strands run"
+    },
+    {
+      "at_seconds": 183.99,
+      "text": "Model round 1: complete (6.969s)"
+    },
+    {
+      "at_seconds": 183.99,
+      "text": "inspect_case: complete (0.001s)"
+    },
+    {
+      "at_seconds": 207.095,
+      "text": "Model round 2: complete (22.766s)"
+    },
+    {
+      "at_seconds": 207.095,
+      "text": "solve_schedule: complete (0.021s)"
+    },
+    {
+      "at_seconds": 210.701,
+      "text": "Model round 3: complete (3.753s)"
+    },
+    {
+      "at_seconds": 210.701,
+      "text": "diagnose_infeasibility: complete (0.0s)"
+    },
+    {
+      "at_seconds": 230.362,
+      "text": "Model round 4: complete (19.822s)"
+    },
+    {
+      "at_seconds": 230.362,
+      "text": "prepare_review: complete (0.0s)"
+    },
+    {
+      "at_seconds": 235.023,
+      "text": "Model round 5: complete (4.272s)"
+    },
+    {
+      "at_seconds": 235.023,
+      "text": "Infeasible case: INFEASIBLE"
+    },
+    {
+      "at_seconds": 235.036,
+      "text": "Rejected stale schedule export after the second cancellation"
+    },
+    {
+      "at_seconds": 235.036,
+      "text": "Hypothetical repairs: starting genuine local Strands run"
+    },
+    {
+      "at_seconds": 245.931,
+      "text": "Model round 1: complete (9.798s)"
+    },
+    {
+      "at_seconds": 245.931,
+      "text": "inspect_case: complete (0.0s)"
+    },
+    {
+      "at_seconds": 261.485,
+      "text": "Model round 2: complete (15.739s)"
+    },
+    {
+      "at_seconds": 261.485,
+      "text": "propose_change: complete (0.001s)"
+    },
+    {
+      "at_seconds": 261.485,
+      "text": "propose_change: complete (0.0s)"
+    },
+    {
+      "at_seconds": 272.394,
+      "text": "Model round 3: complete (10.614s)"
+    },
+    {
+      "at_seconds": 272.394,
+      "text": "simulate_change: complete (0.022s)"
+    },
+    {
+      "at_seconds": 280.678,
+      "text": "Model round 4: complete (8.471s)"
+    },
+    {
+      "at_seconds": 280.678,
+      "text": "simulate_change: complete (0.004s)"
+    },
+    {
+      "at_seconds": 300.82,
+      "text": "Model round 5: complete (19.974s)"
+    },
+    {
+      "at_seconds": 300.82,
+      "text": "prepare_review: complete (0.0s)"
+    },
+    {
+      "at_seconds": 310.121,
+      "text": "Model round 6: complete (9.123s)"
+    },
+    {
+      "at_seconds": 310.121,
+      "text": "prepare_review: complete (0.0s)"
+    },
+    {
+      "at_seconds": 324.667,
+      "text": "Model round 7: complete (14.573s)"
+    },
+    {
+      "at_seconds": 324.667,
+      "text": "Hypothetical repairs: INFEASIBLE"
+    },
+    {
+      "at_seconds": 324.667,
+      "text": "Both alternatives verified feasible; neither changed the confirmed case"
+    }
+  ],
+  "elapsed_seconds": 324.667,
+  "source_receipt_sha256": "874e020a4165ed658254ad2f0de867f56a91ffd6f6664d6ac9934a940428cca3"
+}

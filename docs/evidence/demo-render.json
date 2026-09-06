@@ -1,0 +1,33 @@
+{
+  "video": "ShiftProof-Demo.mp4",
+  "duration_seconds": 208.25,
+  "scene_durations": [
+    23.166666666666668,
+    21.208333333333332,
+    21.875,
+    23.333333333333332,
+    22.458333333333332,
+    24.333333333333332,
+    23.458333333333332,
+    24.375,
+    24.0
+  ],
+  "resolution": [
+    1280,
+    720
+  ],
+  "fps": 24,
+  "native_receipt": "evaluation-20260906T211935Z",
+  "injection_receipt": "injection-20260906T213301Z.json",
+  "unit_test_count": 56,
+  "audio_and_video_decoded": true,
+  "presentation": "Recorded-run result visualization; synthetic operator actions; inference waits edited",
+  "tts": {
+    "runtime": "kokoro-onnx 0.4.9 (MIT)",
+    "weights": "Kokoro v1.0 ONNX (Apache-2.0)",
+    "voice": "af_heart from voices-v1.0.bin (Apache-2.0 model distribution)",
+    "source": "https://github.com/thewh1teagle/kokoro-onnx/releases/tag/model-files-v1.0",
+    "model_sha256": "7d5df8ecf7d4b1878015a32686053fd0eebe2bc377234608764cc0ef3636a6c5",
+    "voices_sha256": "bca610b8308e8d99f32e6fe4197e7ec01679264efed0cac9140fe9c29f1fbf7d"
+  }
+}

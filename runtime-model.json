@@ -1,0 +1,7 @@
+{
+  "model_id": "qwen3.5:9b-q4_K_M",
+  "digest": "6488c96fa5faab64bb65cbd30d4289e20e6130ef535a93ef9a49f42eda893ea7",
+  "quantization": "Q4_K_M",
+  "parameter_size": "9.7B",
+  "endpoint": "http://127.0.0.1:11435"
+}

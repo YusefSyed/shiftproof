@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Local volunteer scheduling review." />
+    <title>ShiftProof · Local volunteer scheduling</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to workspace</a>
+    <header class="site-header">
+      <div class="brand">
+        <span class="brand-mark" aria-hidden="true">✓</span>
+        <div>
+          <strong>ShiftProof</strong><span>Local volunteer scheduling</span>
+        </div>
+      </div>
+      <div id="status-chip" class="status-chip" aria-live="polite">
+        Connecting…
+      </div>
+    </header>
+    <main id="main" class="shell">
+      <section class="intro" aria-labelledby="page-title">
+        <p id="source-label" class="eyebrow">Local volunteer scheduling</p>
+        <h1 id="page-title">
+          Build a schedule you can review with confidence.
+        </h1>
+        <p>
+          Confirm the available information, ask the local scheduling assistant
+          for a review, and approve only a verified schedule.
+        </p>
+      </section>
+      <div id="notice" class="notice" hidden role="alert"></div>
+      <div class="workspace">
+        <section class="panel" aria-labelledby="inputs-title">
+          <div class="panel-heading">
+            <div>
+              <p class="step">1 · Inputs</p>
+              <h2 id="inputs-title">Availability and constraints</h2>
+            </div>
+            <span id="input-state" class="state-label">No case loaded</span>
+          </div>
+          <p class="quiet">
+            Missing volunteer/shift availability records mean that person is
+            unavailable. Each coverage target is the exact number of volunteers
+            required for that shift and role.
+          </p>
+          <div class="button-row">
+            <button id="load-demo" class="button secondary" type="button">
+              Load pantry example</button
+            ><button
+              id="load-note-demo"
+              class="button text-button"
+              type="button"
+            >
+              Load note-safety example
+            </button>
+          </div>
+          <details class="import-details">
+            <summary>Import five scheduling files</summary>
+            <p class="quiet">
+              Select all five fixed files. Their filenames are not used.
+            </p>
+            <form id="import-form">
+              <label
+                >Case JSON<input
+                  name="case.json"
+                  type="file"
+                  accept="application/json,.json"
+                  required /></label
+              ><label
+                >Volunteers CSV<input
+                  name="volunteers.csv"
+                  type="file"
+                  accept=".csv,text/csv"
+                  required /></label
+              ><label
+                >Shifts CSV<input
+                  name="shifts.csv"
+                  type="file"
+                  accept=".csv,text/csv"
+                  required /></label
+              ><label
+                >Coverage CSV<input
+                  name="coverage.csv"
+                  type="file"
+                  accept=".csv,text/csv"
+                  required /></label
+              ><label
+                >Availability CSV<input
+                  name="availability.csv"
+                  type="file"
+                  accept=".csv,text/csv"
+                  required /></label
+              ><button class="button secondary" type="submit">
+                Import files
+              </button>
+            </form>
+          </details>
+          <div id="case-summary" class="data-region">
+            <p class="empty">
+              Load an example or import a case to inspect its inputs.
+            </p>
+          </div>
+          <label class="check-row"
+            ><input id="confirm-inputs" type="checkbox" disabled /><span
+              >I have reviewed the availability and constraints above.</span
+            ></label
+          ><button
+            id="confirm-case"
+            class="button primary"
+            type="button"
+            disabled
+          >
+            Confirm inputs
+          </button>
+        </section>
+        <section class="panel" aria-labelledby="request-title">
+          <div class="panel-heading">
+            <div>
+              <p class="step">2 · Request</p>
+              <h2 id="request-title">Ask for a scheduling review</h2>
+            </div>
+            <span id="model-state" class="state-label"
+              >Checking local model</span
+            >
+          </div>
+          <p id="model-detail" class="quiet">
+            The assistant uses a local model and cannot approve or change a
+            schedule by itself.
+          </p>
+          <div class="preset-row" aria-label="Request presets">
+            <button
+              class="preset"
+              data-request="Inspect this case, find a schedule, and prepare a review using evidence from your tools."
+              type="button"
+            >
+              Find a schedule</button
+            ><button
+              class="preset"
+              data-request="Propose marking V02 unavailable for S2. Simulate it and prepare a review, but do not apply it."
+              type="button"
+            >
+              Simulate an absence</button
+            ><button
+              class="preset"
+              data-request="Diagnose why this case is infeasible, then compare restoring V02 for S3 with raising both V01 limits to 360 minutes and 3 shifts. Keep all changes hypothetical."
+              type="button"
+            >
+              Diagnose options
+            </button>
+          </div>
+          <label for="request">Your request</label
+          ><textarea
+            id="request"
+            rows="5"
+            placeholder="Describe the review you need."
+          ></textarea>
+          <div class="button-row">
+            <button
+              id="run-request"
+              class="button primary"
+              type="button"
+              disabled
+            >
+              Run request</button
+            ><button
+              id="cancel-run"
+              class="button secondary"
+              type="button"
+              disabled
+            >
+              Cancel
+            </button>
+          </div>
+          <div class="trace-wrap">
+            <h3>Actual agent activity</h3>
+            <ol id="trace" class="trace">
+              <li class="empty">
+                Requests and tool activity will appear here.
+              </li>
+            </ol>
+          </div>
+        </section>
+        <section class="panel" aria-labelledby="schedule-title">
+          <div class="panel-heading">
+            <div>
+              <p class="step">3 · Verified result</p>
+              <h2 id="schedule-title">Schedule and workloads</h2>
+            </div>
+            <span id="candidate-state" class="state-label">Waiting</span>
+          </div>
+          <div id="schedule-content" class="data-region">
+            <p class="empty">
+              A verified schedule will appear after a request completes.
+            </p>
+          </div>
+          <div class="button-row">
+            <button
+              id="approve-schedule"
+              class="button primary"
+              type="button"
+              disabled
+            >
+              Approve this schedule
+            </button>
+          </div>
+        </section>
+        <section class="panel" aria-labelledby="review-title">
+          <div class="panel-heading">
+            <div>
+              <p class="step">4 · Review and export</p>
+              <h2 id="review-title">Proposals, approval and files</h2>
+            </div>
+            <span id="approval-state" class="state-label">Not approved</span>
+          </div>
+          <div id="diagnosis-content" class="data-region" hidden></div>
+          <div id="proposal-content" class="data-region">
+            <p class="empty">
+              Hypothetical changes will appear here for review.
+            </p>
+          </div>
+          <div class="export-actions">
+            <button
+              id="export-diagnosis"
+              class="button secondary"
+              type="button"
+              hidden
+            >
+              Download diagnosis bundle</button
+            ><button
+              id="export-approved"
+              class="button primary"
+              type="button"
+              disabled
+            >
+              Download approved bundle
+            </button>
+          </div>
+          <div id="artifact-content" class="data-region">
+            <p class="quiet">
+              Exports are created only after a separate human approval.
+            </p>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer>
+      Local-only prototype · Assignments and approvals come from verified server
+      results.
+    </footer>
+    <script src="/static/app.js" defer></script>
+  </body>
+</html>

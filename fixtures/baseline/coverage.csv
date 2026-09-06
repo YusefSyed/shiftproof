@@ -1,0 +1,9 @@
+shift_id,role,required_count
+S1,lead,1
+S1,helper,1
+S2,lead,1
+S2,helper,1
+S3,lead,1
+S3,helper,1
+S4,lead,1
+S4,helper,1
