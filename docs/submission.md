@@ -44,7 +44,7 @@ Use the repository README to install the pinned dependencies and local model. La
 
 ## Required links and account fields
 - Public source repository: https://github.com/YusefSyed/shiftproof.
-- Public YouTube/Vimeo demo: pending publication.
+- Public YouTube demo: https://www.youtube.com/watch?v=PeNYosqIMco.
 - Architecture: `docs/architecture.svg` in the source repository.
 - AWS Builder ID: account holder must supply or create it.
 - AWS account: required by the rules; not yet verified.

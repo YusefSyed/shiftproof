@@ -57,6 +57,8 @@ uv run --frozen ruff check .
 uv run --frozen mypy src
 ```
 
+Watch the [3:28 demo](https://www.youtube.com/watch?v=PeNYosqIMco).
+
 Measured local validation is summarized in [evaluation evidence](docs/evaluation.md). The rendered demo uses synthetic operators and recorded results with shortened inference waits; it is not a live recording. The [demo script](docs/demo-script.md) distinguishes recorded evidence from planned steps.
 
 To reproduce the native evaluation while the app is running:
@@ -70,7 +72,7 @@ The evaluation uses synthetic data and automated coordinator actions. Runtime an
 
 ## Project status
 
-This is a prototype using synthetic community-pantry data. Source: [YusefSyed/shiftproof](https://github.com/YusefSyed/shiftproof). The public video, required AWS account and Builder ID verification, and contest entry are pending. See [the submission checklist](docs/submission-checklist.md).
+This is a prototype using synthetic community-pantry data. Source: [YusefSyed/shiftproof](https://github.com/YusefSyed/shiftproof). [Public demo video](https://www.youtube.com/watch?v=PeNYosqIMco). Contest registration is complete; AWS account/Builder ID verification and final entry submission are pending. See [the submission checklist](docs/submission-checklist.md).
 
 ## License
 

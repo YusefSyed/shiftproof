@@ -25,7 +25,7 @@ The sanitized structured receipts are [native workflow](evidence/native-workflow
 
 ## Remaining release gates
 
-The public source repository is https://github.com/YusefSyed/shiftproof. A public video, contest registration and terms, the required AWS account and Builder ID, and a submission receipt remain pending. See [submission checklist](submission-checklist.md).
+The public source repository is https://github.com/YusefSyed/shiftproof. The [public video](https://www.youtube.com/watch?v=PeNYosqIMco) is published and contest registration is complete. Required AWS account/Builder ID verification and a final submission receipt remain pending. See [submission checklist](submission-checklist.md).
 
 ## Browser acceptance
 

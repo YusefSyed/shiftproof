@@ -9,10 +9,10 @@ Contest reference: [Agents for Humans rules](https://agentsforhumans.devpost.com
 - [x] Created as a new project on September 6, 2026; standard dependencies and AI assistance disclosed.
 - [x] Complete the full real local-model workflow evaluation and retain its sanitized receipt separately from mocked tests.
 - [x] Run the release checks and retain their actual output.
-- [x] Render a sub-five-minute synthetic-results demo; publication and any required disclosure remain pending.
+- [x] Render a sub-five-minute synthetic-results demo; published with AI narration disclosure.
 - [x] Publish the source repository publicly; GitHub detects the MIT license.
 - [x] Repository created: https://github.com/YusefSyed/shiftproof.
-- [ ] Add the actual public video URL here after publication: pending.
+- [x] Public demo: https://www.youtube.com/watch?v=PeNYosqIMco.
 - [x] Prepare truthful submission text in `submission.md`, including synthetic scheduling and local inference.
-- [ ] Review the final Devpost form and its terms with the account holder.
+- [x] Account holder approved agreements and eligibility; contest registration completed. Final entry review remains.
 - [ ] Submit only after the account holder accepts the applicable terms and confirms the final entry.

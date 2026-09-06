@@ -21,4 +21,4 @@ Narration: locally generated Kokoro voice, with model and software provenance do
 ## Audience and disclosure
 This technical software demonstration is intended for general adult developer audiences, not children. It uses a synthetic narration voice and synthetic demonstration data, with those facts stated in the description and video transcript. No paid sponsorship or affiliate promotion is included.
 
-Status: upload and publication pending the account holder's agreement to YouTube's displayed upload terms.
+Status: published September 6, 2026 on the Yusef Syed (@YusefSyed-w4p) channel. Public URL: https://www.youtube.com/watch?v=PeNYosqIMco. YouTube displayed Video published and no issues in its checks. AI-use disclosure enabled.
