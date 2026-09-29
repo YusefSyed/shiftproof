@@ -1,8 +1,16 @@
 # ShiftProof
 
+[![CI](https://github.com/YusefSyed/shiftproof/actions/workflows/ci.yml/badge.svg)](https://github.com/YusefSyed/shiftproof/actions/workflows/ci.yml)
+
 ShiftProof is a local prototype for reviewing a small synthetic community-pantry volunteer schedule. It separates a local scheduling assistant from independent constraint verification and from the coordinator actions that apply a change, approve a schedule, or export a bundle.
 
 It is built for a single seven-day planning window with up to 20 volunteers, 12 shifts, three role codes, and 40 required assignment slots. It is not a payroll system, a legal-compliance system, or a production service. Exported calendars are schedule snapshots; they do not create invitations or synchronize with calendars.
+
+[Watch the 3:28 demo](https://www.youtube.com/watch?v=PeNYosqIMco) ·
+[Measured evaluation](docs/evaluation.md) · [Architecture](docs/architecture.svg)
+
+The demo uses synthetic operators and recorded results with shortened inference
+waits; it is not a live recording.
 
 ## What it does
 
@@ -12,6 +20,22 @@ It is built for a single seven-day planning window with up to 20 volunteers, 12 
 - Independently verifies candidate schedules before they can be approved.
 - Keeps proposed changes hypothetical until a coordinator confirms and applies them.
 - Exports an approved schedule as a deterministic ZIP with CSV, JSON, verification, and iCalendar files.
+
+## Check it without a model
+
+The deterministic tests exercise scheduling, independent verification, approval,
+and export contracts. They do not download model weights or call an inference API.
+With Python 3.12 and [uv](https://docs.astral.sh/uv/getting-started/installation/):
+
+```sh
+git clone https://github.com/YusefSyed/shiftproof.git
+cd shiftproof
+uv sync --frozen
+uv run --frozen pytest -m 'not local_llm'
+```
+
+GitHub Actions runs these tests, Ruff, and mypy. Actual local-model behavior is
+reported separately in the [evaluation evidence](docs/evaluation.md).
 
 ## Local setup
 
